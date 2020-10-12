@@ -5,5 +5,5 @@
 int is_prime(int n);
 
 int main() {
-    printf("%d", is_prime(1));
+    printf("Hello World");
 }
