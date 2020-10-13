@@ -1,8 +1,8 @@
-global is_prime
-
 section .data
 
 section .text
+    global is_prime
+
 is_prime:
 
     ; *** Standard subroutine prologue ***
@@ -21,31 +21,32 @@ is_prime:
     ; [ESP+8]: last division check (param - 1)
     ; TODO: EDX can be the square root of the parameter
     ; EAX: return value
-    mov [esp+4], 2
-    mov [esp+8], [ebp+8]
-    dec [esp+8]
-    mov eax, 1
+    mov word [esp+4], 2
+    mov eax, [ebp+8]
+    mov [esp+8], eax
+    dec word [esp+8]
 
     prime_loop:
         ; Modulus operation
         mov eax, [ebp+8] ; dividend low half
         mov edx, 0       ; dividend high half = 0
-        div [esp+4]      ; Divides 1234 by 10.
+        div word [esp+4]      ; Divides 1234 by 10.
         ; EDX : remainder
         
         ; Check if it is divisible by the divisor
         cmp edx, 0
         jne end_of_loop
-        mov aex, 0
+        mov eax, 0
         jmp end_method
 
         end_of_loop:
-        inc [esp+4]
+        inc word [esp+4]
         
-        cmp [esp+4], [esp+8]
+        mov eax, [esp+8]
+        cmp [esp+4], eax
         jle prime_loop
 
-    mov aex, 1
+    mov eax, 1
     end_method:
 
     ; From this point on the return value should be on the EAX register
