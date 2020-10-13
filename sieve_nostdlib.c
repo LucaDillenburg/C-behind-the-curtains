@@ -36,4 +36,6 @@ int main(int argc, char *argv[]) {
 
     print_asm(1, snum);
     print_asm(1, "\n");
+
+    return 0;
 }

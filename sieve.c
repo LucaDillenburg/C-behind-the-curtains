@@ -2,12 +2,6 @@
 #include <stdlib.h> 
 #include <math.h>
 
-int is_prime(int n);
-
-int main() {
-    printf("%d", is_prime(1));
-}
-
 int is_prime(int n) {
     int div;
     double lastDiv = sqrt((double)n);
@@ -23,4 +17,10 @@ int is_prime(int n) {
             return 0;
 
     return 1;
+}
+
+int main(int argc, char *argv[]) {
+    int param = atoi(argv[1]);
+    printf("%d\n", is_prime(param));
+    return 0;
 }
