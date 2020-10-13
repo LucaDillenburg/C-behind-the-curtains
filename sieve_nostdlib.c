@@ -1,8 +1,7 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-// #include "is_prime.o"
 
+extern void print_asm(int length, char *string);
 extern int is_prime(int n);
 
 int main(int argc, char *argv[]) {

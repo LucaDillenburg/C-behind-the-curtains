@@ -1,9 +1,9 @@
 section .data
 
 section .text
-    global is_prime
+    global print_asm
 
-is_prime:
+print_asm:
 
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
     ; Standard subroutine prologue
