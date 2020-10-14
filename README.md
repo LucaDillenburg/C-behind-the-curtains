@@ -1,4 +1,4 @@
-# Assembly and C integration
+# C behind the curtains (Assembly Integration)
 
 ## Objetive
 To understand how a C program runs runs the curtain by writing assembly code that starts a C program, calls functions written in C, implements functions that are called in a C program, and replaces the basic functionality of the C standard library.
