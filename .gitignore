@@ -1,4 +1,6 @@
-is_prime
+_start.o
+print.o
 is_prime.o
 sieve
 sieve_asm
+sieve_nostdlib
